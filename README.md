@@ -21,3 +21,9 @@ Projeto
 |	|	/images
 |	|	/js
 ```
+
+### Requisitos
+
+-Ruby on Rails
+-Sass
+-Node JS e dependências
