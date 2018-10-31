@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" ng-controller="headerController as ctrl">
 	<div class="navbar bg-nav">
 		<nav class="main">
 			<div class="float-left">
@@ -17,6 +17,7 @@
 				<button class="navbar-toggler">
 					<i class="material-icons">settings</i>
 				</button>
+				{{ctrl.name}}
 			</div>
 		</nav>
 	</div>

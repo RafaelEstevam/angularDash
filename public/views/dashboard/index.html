@@ -1,45 +1,91 @@
 		<div ng-include src="'views/common/header.html'"></div>
-		
-		<main class="main">
-			<div class="row mt-3">
-				<div class="col-md-3">
-					<h2>Dashboard</h2>
-				</div>
-				<div class="col-md-3 offset-md-6">
-					<input type="date" class="form-control">
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-md-7">
-					<div class="shadow p-3 bg-white rounded">Total</div>
-				</div>
-				<div class="col-md-5">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="shadow p-3 bg-white rounded">Vendas</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div ng-include src="'views/common/menu.html'" class="col-sm-2"></div>
+				<main class="col-md-10">
+					<div class="row mt-3">
+						<div class="col-md-3">
+							<h2>Dashboard</h2>
 						</div>
-						<div class="col-md-6">
-							<div class="shadow p-3 bg-white rounded">Frete</div>
+						<div class="col-md-3 offset-md-6">
+							<div class="row">
+								<div class="col-md-5">
+									<select class="form-control">
+										<option></option>
+										<option>Ano</option>
+										<option>Mês</option>
+									</select>
+								</div>
+								<div class="col-md-7">
+									<select class="form-control">
+										<option></option>
+										<option>Janeiro</option>
+										<option>Fevereiro</option>
+										<option>Março</option>
+										<option>Abril</option>
+										<option>Maio</option>
+										<option>Junho</option>
+										<option>Julho</option>
+										<option>Agosto</option>
+										<option>Setembro</option>
+										<option>Outubro</option>
+									</select>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="row mt-3">
-						<div class="col-md-6">
-							<div class="shadow p-3 bg-white rounded">Devoluções</div>
+						<div class="col-md-7">
+							<div class="shadow p-3 bg-white rounded">
+								<div class="ct-chart ct-perfect-fourth"></div>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="shadow p-3 bg-white rounded">Cancelamentos</div>
+						<div class="col-md-5">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="shadow p-3 bg-white rounded">
+										Receita atual
+										R$ 1000,00
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="shadow p-3 bg-white rounded">
+										Despesas
+										R$ 1000,00
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-6">
+									<div class="shadow p-3 bg-white rounded">
+										À receber
+										R$ 2200,00
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="shadow p-3 bg-white rounded">
+										Gastos futuros
+										R$ 1000,00
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
+					<div class="row mt-3">
+						<div class="col-md-4">
+							<div class="shadow p-3 bg-white rounded">
+								Principais despesas
+								<div class="ct-chart-pie ct-perfect-fourth"></div>
+		
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="shadow p-3 bg-white rounded">Lista de desejos</div>
+						</div>
+					</div>
+				</main>
 			</div>
-			<div class="row mt-3">
-				<div class="col-md-4">
-					<div class="shadow p-3 bg-white rounded">Principal</div>
-				</div>
-				<div class="col-md-8">
-					<div class="shadow p-3 bg-white rounded">Principal</div>
-				</div>
-			</div>
-		</main>
+		</div>
 
 		<div ng-include src="'views/common/footer.html'"></div>

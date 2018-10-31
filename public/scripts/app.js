@@ -8,7 +8,6 @@ app.config(function($routeProvider,  $locationProvider) {
 
     .when("/", {
         templateUrl : "views/home/index.html",
-        controller : "indexCtrl as ctrl"
     })
 
     .otherwise({
