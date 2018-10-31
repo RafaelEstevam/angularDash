@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
                 },
                 files: {
-                    'public/css/style.css': 'public/sass/style.sass'
+                    'public/statics/css/style.css': 'public/sass/style.sass'
                 }
             }
         },
@@ -16,9 +16,9 @@ module.exports = function(grunt) {
           target: {
             files: [{
                 expand: true,
-                cwd: 'public/css',
+                cwd: 'public/statics/css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'public/css',
+                dest: 'public/statics/css',
                 ext: '.min.css'
             }]
           }
@@ -28,9 +28,9 @@ module.exports = function(grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'public/js',
+                    cwd: 'public/statics/plugins',
                     src: ['*.js', '!*.min.js'],
-                    dest: 'public/js',
+                    dest: 'public/statics/plugins',
                     ext: '.min.js'
                 }]
             }
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 tasks: ['build']
             },
             js: {
-                files: ['public/js/*.js'],
+                files: ['public/scripts/*.js', 'public/statics/plugins/*.js'],
                 tasks: ['uglify']
             }
         },
@@ -62,10 +62,10 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {expand: true, cwd: 'public/', src: ['*.html'], dest: 'app/'},
-                    {expand: true, cwd: 'public/css', src: ['*.min.css'], dest: 'app/css'},
-                    {expand: true, cwd: 'public/js', src: ['*.min.js'], dest: 'app/js'},
-                    {expand: true, cwd: 'public/fonts', src: ['*', '!*.html'], dest: 'app/fonts'},
-                    {expand: true, cwd: 'public/images', src: ['*'], dest: 'app/images'},
+                    {expand: true, cwd: 'public/views', src: ['*/*.html'], dest: 'app/views'},
+                    {expand: true, cwd: 'public/statics/css', src: ['*.min.css'], dest: 'app/statics/css'},
+                    {expand: true, cwd: 'public/statics/plugins', src: ['*.min.js'], dest: 'app/statics/plugins'},
+                    {expand: true, cwd: 'public/scripts', src: ['*.js', '*/*/*.js'], dest: 'app/scripts'},
                 ],
             },
         },

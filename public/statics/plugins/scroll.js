@@ -6,7 +6,7 @@ $(document).ready(function(){
 		if(scroll >= 150){
 			$(".header").addClass("top-fixed")
 		}else if(scroll < 150){
-			$(".header").removeClass("top-fixed")
+			$(".header").removeClass("top-fixed");
 		}
-	}) 
+	})
 })
