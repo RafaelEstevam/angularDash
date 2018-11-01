@@ -22,6 +22,8 @@ Projeto
 │   │   index.hmtl
 │   │   /sass
 |   |   /views
+|   |   /statics
+|   |   /scripts
 ```
 
 ### Requisitos
