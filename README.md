@@ -21,10 +21,9 @@ Projeto
 └─── / public
 │   │   index.hmtl
 │   │   /sass
-|	|	/css
-|	|	/views
-|	|	/statics
-|	|	/scripts
+|	|	/views (html)
+|	|	/statics (css, images, plugins)
+|	|	/scripts (controllers)
 ```
 
 ### Requisitos
