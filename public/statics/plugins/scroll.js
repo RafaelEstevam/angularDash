@@ -1,4 +1,4 @@
-// --- scrol top ---
+// --- plugins ---
 
 $(document).ready(function(){
 	$(document).scroll(function(){

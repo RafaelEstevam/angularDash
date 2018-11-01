@@ -38,13 +38,22 @@ a {
   background-color: #2e4996;
 }
 
+.bg-inverse-color {
+  background-color: #1e2e60;
+}
+
 .min-text {
   font-size: 12px;
 }
 
-/*------------------- */
-/*------HEADER------- */
-/*------------------- */
+.no-border {
+  border: 0px;
+  border-radius: 0px;
+}
+
+/*-------------------*/
+/*------HEADER-------*/
+/*-------------------*/
 .logo {
   background: rgba(0, 0, 0, 0.2);
 }
@@ -81,11 +90,18 @@ a {
 
 .notifc::before {
   content: "";
-  height: 5px;
-  width: 5px;
-  background-color: #c00;
+  height: 8px;
+  width: 8px;
+  background-color: #F00;
   position: absolute;
   border-radius: 1000px;
+}
+
+.btn-notifc {
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 0px;
 }
 
 .conf-button {
@@ -100,12 +116,20 @@ a {
   font-weight: bold;
 }
 
-/*------------------- */
-/*--------MENU------- */
-/*------------------- */
+/*-------------------*/
+/*--------MENU-------*/
+/*-------------------*/
 .main-sidebar {
   background: #131313;
   padding: 0px;
+}
+
+.main-sidebar.mobile {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  width: 80%;
+  height: 100%;
 }
 
 .nav .nav {
@@ -125,11 +149,34 @@ a {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/*-------------------- */
-/*-----Dashboard------ */
-/*-------------------- */
+.overlay-drawer {
+  background: rgba(0, 0, 0, 0.2);
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: -25%;
+  cursor: pointer;
+}
+
+/*--------------------*/
+/*-----Dashboard------*/
+/*--------------------*/
 .chart-bar-dashboard:before {
   padding-bottom: 258px !important;
+}
+
+/*-----------------*/
+/*-----Mobile------*/
+/*-----------------*/
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

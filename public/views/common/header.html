@@ -1,21 +1,24 @@
 <header class="header" ng-controller="headerController as ctrl">
 	<div class="menu bg-nav row no-gutters">
 		<div class="col-md-2 logo">
-			<button class="navbar-toggler float-left m-1">
+			<button class="navbar-toggler float-left m-1 mobile" id="btn-menu">
 				<i class="material-icons">menu</i>
 			</button>
-			<a href="#" class="navbar-brand d-flex align-items-center float-left">
+			<a href="#" class="navbar-brand d-flex align-items-center float-left pl-md-4">
 				<strong>testAngular</strong>
 			</a>
+			<button class="navbar-toggler float-right m-1 mobile" id="btn-search">
+				<i class="material-icons">search</i>
+			</button>
 		</div>
-		<div class="col-md-8">
-			<input class="form-control form-control-lg desktop search" placeholder="Search...">
+		<div class="col-md-8 desktop" id="search">
+			<input class="form-control form-control-lg search" placeholder="Search...">
 		</div>
 		<div class="col-md-2 input-group-append">
-			<button class="navbar-toggler notifc">
+			<button class="btn-notifc notifc pl-3 pr-3" id="btn-notifications" data-toggle="modal" data-target="#modal-notifications">
 				<i class="material-icons">notifications_none</i>
 			</button>
-			<button class="navbar-toggler conf-button logo float-right">
+			<button class="btn conf-button logo float-right">
 					<i class="material-icons float-left mr-2">person_outline</i>
 					<span>{{ctrl.name}}</span>
 			</button>

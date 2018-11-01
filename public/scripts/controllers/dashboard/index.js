@@ -30,11 +30,11 @@ angular.module("myApp").controller('indexCtrl', function($scope) {
 	new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
 
 	var chart = new Chartist.Pie('.ct-chart-pie', {
-		series: [10, 20, 50, 20, 5, 50, 15],
-		labels: [1, 2, 3, 4, 5, 6, 7]
+		series: [10, 20, 50],
+		labels: ['Curso', 'Alimentação', 'Transporte']
 	  }, {
-		donut: true,
-		showLabel: false
+		donut: false,
+		showLabel: true
 	});
 	  
 	chart.on('draw', function(data) {

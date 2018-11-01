@@ -1,4 +1,9 @@
-<nav class="nav sidebar">
+<nav class="nav sidebar" id="drawer-menu" ng-controller="menuController">
+	<div class="col-sm-12 no-gutters text-center mobile p-5 bg-main">
+		<h2 class="text-center">
+			<a href="#" class="navbar-brand text-light">testAngular</a>
+		</h2>
+	</div>
 	<ul class="nav flex-column">
 		<li class="nav-item">
 			<a class="nav-link active" href="#"><i class="material-icons float-left mr-2">data_usage</i> Dashboard</a>
@@ -11,3 +16,6 @@
 		</li>
 	</ul>
 </nav>
+<div class="overlay-drawer mobile text-center"> 
+	<h4 class="text-light bg-inverse-color p-3">X</h4> 
+</div>

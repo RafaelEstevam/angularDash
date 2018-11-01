@@ -2,7 +2,7 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div ng-include src="'views/common/menu.html'" class="col-sm-2 main-sidebar"></div>
+				<div ng-include src="'views/common/menu.html'" class="col-xs-2 col-sm-2 main-sidebar desktop" id="main-sidebar"></div>
 				<main class="col-md-10 pt-3 pl-4 pr-4">
 					<div class="row mt-3">
 						<div class="col-md-3">
@@ -14,13 +14,13 @@
 										<p>Busque por: </p>
 								</div>
 								<div class="col-md-3">
-									<select class="form-control">
+									<select class="form-control rounded-0">
 										<option>Mês</option>
 										<option>Dia</option>
 									</select>
 								</div>
 								<div class="col-md-6">
-									<select class="form-control">
+									<select class="form-control rounded-0">
 										<option>Janeiro</option>
 										<option>Fevereiro</option>
 										<option>Março</option>
@@ -38,10 +38,16 @@
 					</div>
 					<div class="row">
 						<div class="col-md-7">
-							<div class="shadow p-3 bg-white rounded mt-3">
+							<div class="shadow p-3 bg-white mt-3">
 								<div class="row">
 									<div class="col-md-12">
-										<h4>Movimentações <button class="btn float-right"><i class="material-icons">more_vert</i></button></h4>
+										<h4 class="float-left">Movimentações</h4>
+										<div class="input-group-append float-right">
+											<button class="btn rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></button></button>
+											<div class="dropdown-menu dropdown-menu-right">
+ 												<a class="dropdown-item font-weight-bold" href="#">Adicionar movimentação</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<hr>
@@ -51,15 +57,15 @@
 						<div class="col-md-5">
 							<div class="row">
 								<div class="col-md-6">
-									<div class="shadow p-3 rounded bg-success text-light mt-3">
-										<p>Receita atual <button class="btn overlay-button float-right"><i class="material-icons">visibility</i></button></p>
+									<div class="shadow p-3 bg-success text-light mt-3">
+										<p>Receita atual <button class="btn rounded-0 overlay-button float-right"><i class="material-icons">visibility</i></button></p>
 										<h3>R$ 1000,00</h3>
 										<p><i class="material-icons">arrow_upward</i> %5,23</p>
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="shadow p-3 rounded bg-danger text-light mt-3">
-										<p>Despesas <button class="btn overlay-button float-right"><i class="material-icons">visibility</i></button></p>
+									<div class="shadow p-3 bg-danger text-light mt-3">
+										<p>Despesas <button class="btn rounded-0 overlay-button float-right"><i class="material-icons">visibility</i></button></p>
 										<h3>R$ 1000,00</h3>
 										<p><i class="material-icons">arrow_downward</i> %5,23</p>
 									</div>
@@ -67,15 +73,15 @@
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<div class="shadow p-3 bg-white rounded mt-3">
-										<p>À receber<button class="btn float-right"><i class="material-icons">visibility</i></button></p>
+									<div class="shadow p-3 bg-white mt-3">
+										<p>À receber<button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></p>
 										<h3>R$ 2200,00</h3>
 										<p class="text-success"><i class="material-icons">arrow_upward</i> %5,23</p>
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="shadow p-3 rounded bg-white mt-3">
-										<p>Gastos futuros <button class="btn float-right"><i class="material-icons">visibility</i></button></p>
+									<div class="shadow p-3 bg-white mt-3">
+										<p>Gastos futuros <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></p>
 										<h3>R$ 800,00</h3>
 										<p class="text-danger"><i class="material-icons">arrow_downward</i> %5,23</p>
 									</div>
@@ -85,10 +91,19 @@
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-							<div class="shadow p-3 bg-white rounded mt-3">
+							<div class="shadow p-3 bg-white mt-3">
 								<div class="row">
 									<div class="col-md-12">
-										<h6>Principais despesas <button class="float-right"><i class="material-icons">more_vert</i></button></h6>
+										<h6 class="float-left">Principais despesas</h6>
+										<div class="input-group-append float-right">
+											<button class="btn rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></button></button>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">No mês</a>
+												<a class="dropdown-item" href="#">No ano</a>
+												<div class="dropdown-divider"></div>
+ 												<a class="dropdown-item font-weight-bold" href="#">Adicionar Despesa</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<hr>
@@ -96,13 +111,47 @@
 							</div>
 						</div>
 						<div class="col-md-8">
-							<div class="shadow p-3 bg-white rounded mt-3">
+							<div class="shadow p-3 bg-white mt-3">
 								<div class="row">
 									<div class="col-md-12">
-										<h6>Lista de desejos <button class="float-right"><i class="material-icons">more_vert</i></button></h6>
+										<h6 class="float-left">Lista de desejos</h6>
+										<div class="input-group-append float-right">
+											<button class="btn rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></button></button>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">No orçamento</a>
+												<a class="dropdown-item" href="#">Fora e alcance</a>
+												<div class="dropdown-divider"></div>
+ 												<a class="dropdown-item font-weight-bold" href="#">Adicionar desejo</a>
+											</div>
+										</div>
 									</div>
 								</div>
-								<hr>
+								<div class="row mt-3">
+									<div class="col-sm-12">
+										<table class="table">
+											<tr>
+												<th>Nome</th>
+												<th>Valor</th>
+												<th></th>
+											</tr>
+											<tr>
+												<td>Fone de ouvido</td>
+												<td>R$ 200,00</td>
+												<td class="text-success">Está no orçamento <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
+											</tr>
+											<tr>
+												<td>Notebook Dell</td>
+												<td>R$ 2500,00</td>
+												<td class="text-danger">Fora de alcance <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
+											</tr>
+											<tr>
+												<td>Corsa 2011</td>
+												<td>R$ 17500,00</td>
+												<td class="text-danger">Fora de alcance <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

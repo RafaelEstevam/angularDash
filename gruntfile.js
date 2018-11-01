@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                 tasks: ['build']
             },
             js: {
-                files: ['public/scripts/*.js', 'public/scripts/*/*/*.js', 'public/statics/plugins/*.js'],
+                files: ['public/statics/plugins/*.js'],
                 tasks: ['uglify']
             }
         },

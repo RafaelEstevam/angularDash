@@ -10,10 +10,10 @@ $light-bg-color: $light-color
 $main-color: #2e4996
 $main-bg-color: $main-color
 
-$inverse-color: #54c1f5
+$inverse-color: #1e2e60
 $inverse-bg-color: $inverse-color
 
-$notifc-color: #c00
+$notifc-color: #F00
 $notifc-bg-color: $notifc-color
 
 $dark-color: #000
@@ -75,8 +75,16 @@ a
 .bg-main
 	background-color: $main-color
 
+.bg-inverse-color
+	background-color: $inverse-color
+
 .min-text
 	font-size: 12px
+
+.no-border
+	border: 0px
+	border-radius: 0px
+	
 
 /*-------------------*/
 /*------HEADER-------*/
@@ -110,11 +118,16 @@ a
 
 .notifc::before
 	content: ''
-	height: 5px
-	width: 5px
+	height: 8px
+	width: 8px
 	background-color: $notifc-color
 	position: absolute
 	border-radius: 1000px
+
+.btn-notifc
+	background: transparent
+	cursor: pointer
+	@include border-style
 
 .conf-button
 	color: $light-color
@@ -133,6 +146,13 @@ a
 	background: $no-dark-color
 	padding: 0px
 
+.main-sidebar.mobile
+	position: fixed
+	z-index: 1000
+	top: 0px
+	width: 80%
+	height: 100%
+
 .nav .nav
 	width: 100%
 
@@ -147,9 +167,29 @@ a
 	border-color: $main-color
 	background: $overlay-color
 
+.overlay-drawer
+	background: $overlay-color
+	width: 25%
+	height: 100%
+	position: absolute
+	top: 0px
+	right: -25%
+	cursor: pointer
+
 /*--------------------*/
 /*-----Dashboard------*/
 /*--------------------*/
 
 .chart-bar-dashboard:before
 	padding-bottom: 258px !important
+
+/*-----------------*/
+/*-----Mobile------*/
+/*-----------------*/
+
+@media (max-width: 767px)
+	.desktop
+		display: none
+
+	.mobile
+		display: block
