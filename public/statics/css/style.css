@@ -20,8 +20,87 @@ a {
   margin: 0 auto;
 }
 
+/*------------------- */
+/*------HEADER------- */
+/*------------------- */
+.logo {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.logo button, .logo a {
+  color: #eee;
+}
+
 .bg-nav {
-  background: #7a59a5;
+  background: #2e4996;
+}
+
+.menu {
+  width: 100%;
+}
+
+.search {
+  opacity: 0.5;
+  border-radius: 0px;
+  border: 0px;
+  background: #000;
+  color: #eee;
+}
+
+.search:focus {
+  color: #eee;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.menu button .material-icons {
+  color: #eee;
+}
+
+.notifc::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: #c00;
+  position: absolute;
+  border-radius: 1000px;
+}
+
+.conf-button {
+  color: #eee;
+  width: 100%;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.conf-button span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*------------------- */
+/*--------MENU------- */
+/*------------------- */
+.main-sidebar {
+  background: #131313;
+  padding: 0px;
+}
+
+.nav .nav {
+  width: 100%;
+}
+
+.nav-link {
+  color: #eee;
+  border-left: 3px solid transparent;
+  padding: 15px;
+  transition: ease-in all 0.3s;
+}
+
+.nav-link:hover {
+  color: #eee;
+  border-color: #2e4996;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */
