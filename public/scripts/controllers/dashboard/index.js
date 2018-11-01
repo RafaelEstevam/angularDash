@@ -12,7 +12,8 @@ angular.module("myApp").controller('indexCtrl', function($scope) {
 	};
 	
 	var options = {
-		seriesBarDistance: 10
+		seriesBarDistance: 10,
+		height: '200px'
 	};
 		
 	var responsiveOptions = [

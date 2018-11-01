@@ -61,6 +61,23 @@ a
 	width: 100%
 	margin: 0 auto
 
+.text-light
+	color: $light-color
+
+.overlay-button
+	background: $overlay-color
+	@include border-style
+	padding: 5px 10px
+	border-radius: 5px
+	color: $light-color
+	font-size: 12px
+
+.bg-main
+	background-color: $main-color
+
+.min-text
+	font-size: 12px
+
 /*-------------------*/
 /*------HEADER-------*/
 /*-------------------*/
@@ -129,3 +146,10 @@ a
 	color: $light-color
 	border-color: $main-color
 	background: $overlay-color
+
+/*--------------------*/
+/*-----Dashboard------*/
+/*--------------------*/
+
+.chart-bar-dashboard:before
+	padding-bottom: 258px !important

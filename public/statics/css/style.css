@@ -20,6 +20,28 @@ a {
   margin: 0 auto;
 }
 
+.text-light {
+  color: #eee;
+}
+
+.overlay-button {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  border: 0px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #eee;
+  font-size: 12px;
+}
+
+.bg-main {
+  background-color: #2e4996;
+}
+
+.min-text {
+  font-size: 12px;
+}
+
 /*------------------- */
 /*------HEADER------- */
 /*------------------- */
@@ -101,6 +123,13 @@ a {
   color: #eee;
   border-color: #2e4996;
   background: rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------- */
+/*-----Dashboard------ */
+/*-------------------- */
+.chart-bar-dashboard:before {
+  padding-bottom: 258px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
