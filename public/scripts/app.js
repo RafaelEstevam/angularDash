@@ -1,13 +1,14 @@
 var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider,  $locationProvider) {
     $routeProvider
-    .when("/dashboard", {
+    .when("/", {
         templateUrl : "views/dashboard/index.html",
         controller : "indexCtrl as ctrl"
     })
 
-    .when("/", {
-        templateUrl : "views/home/index.html",
+    .when("/movements", {
+        templateUrl : "views/movements/index.html",
+        controller : "movementsCtrl as ctrl"
     })
 
     .otherwise({

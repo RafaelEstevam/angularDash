@@ -46,6 +46,10 @@ a {
   font-size: 12px;
 }
 
+.big-text {
+  font-size: 80px !important;
+}
+
 .no-border {
   border: 0px;
   border-radius: 0px;
@@ -122,6 +126,7 @@ a {
 .main-sidebar {
   background: #131313;
   padding: 0px;
+  min-height: 100vh;
 }
 
 .main-sidebar.mobile {
@@ -164,6 +169,24 @@ a {
 /*--------------------*/
 .chart-bar-dashboard:before {
   padding-bottom: 258px !important;
+}
+
+/*-----Bar chart -----*/
+.ct-series-a .ct-bar {
+  stroke: #28a745 !important;
+}
+
+/*-----Pie chart ----*/
+.ct-series-a .ct-slice-pie {
+  fill: #a2b5ea !important;
+}
+
+.ct-series-b .ct-slice-pie {
+  fill: #8aa0dc !important;
+}
+
+.ct-series-c .ct-slice-pie {
+  fill: #6681cc !important;
 }
 
 /*-----------------*/

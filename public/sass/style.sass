@@ -9,6 +9,9 @@ $light-bg-color: $light-color
 
 $main-color: #2e4996
 $main-bg-color: $main-color
+$main-color-0: #6681cc
+$main-color-1: #8aa0dc
+$main-color-2: #a2b5ea
 
 $inverse-color: #1e2e60
 $inverse-bg-color: $inverse-color
@@ -18,6 +21,8 @@ $notifc-bg-color: $notifc-color
 
 $dark-color: #000
 $dark-bg-color: $dark-color
+
+$sucess-color: #28a745
 
 $no-dark-color: #131313
 $no-dark-bg-color: $no-dark-color
@@ -80,6 +85,9 @@ a
 
 .min-text
 	font-size: 12px
+
+.big-text
+	font-size: 80px !important
 
 .no-border
 	border: 0px
@@ -145,6 +153,7 @@ a
 	// @include linear-gradient($main-color, $no-dark-color)
 	background: $no-dark-color
 	padding: 0px
+	min-height: 100vh
 
 .main-sidebar.mobile
 	position: fixed
@@ -182,6 +191,22 @@ a
 
 .chart-bar-dashboard:before
 	padding-bottom: 258px !important
+
+
+/*-----Bar chart -----*/
+
+.ct-series-a .ct-bar
+	stroke: $sucess-color !important
+
+/*-----Pie chart ----*/
+.ct-series-a .ct-slice-pie 
+	fill: $main-color-2 !important
+
+.ct-series-b .ct-slice-pie 
+	fill: $main-color-1 !important
+
+.ct-series-c .ct-slice-pie 
+	fill: $main-color-0 !important
 
 /*-----------------*/
 /*-----Mobile------*/

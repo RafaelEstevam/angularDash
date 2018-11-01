@@ -2,7 +2,7 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div ng-include src="'views/common/menu.html'" class="col-xs-2 col-sm-2 main-sidebar desktop" id="main-sidebar"></div>
+				<div ng-include src="'views/common/menu.html'" class="col-xs-2 col-md-2 main-sidebar desktop" id="main-sidebar"></div>
 				<main class="col-md-10 pt-3 pl-4 pr-4">
 					<div class="row mt-3">
 						<div class="col-md-3">
@@ -11,16 +11,16 @@
 						<div class="col-md-5 offset-md-4">
 							<div class="row">
 								<div class="col-sm-3 text-center">
-										<p>Busque por: </p>
+									<p>Busque por: </p>
 								</div>
 								<div class="col-md-3">
-									<select class="form-control rounded-0">
+									<select class="form-control rounded-0 mb-3" ng-model="ctrl.selectOption">
 										<option>Mês</option>
 										<option>Dia</option>
 									</select>
 								</div>
 								<div class="col-md-6">
-									<select class="form-control rounded-0">
+									<select class="form-control rounded-0" ng-show="ctrl.selectOption == 'Mês'">
 										<option>Janeiro</option>
 										<option>Fevereiro</option>
 										<option>Março</option>
@@ -32,6 +32,7 @@
 										<option>Setembro</option>
 										<option>Outubro</option>
 									</select>
+									<input class="form-control rounded-0" type="date" ng-show="ctrl.selectOption == 'Dia'">
 								</div>
 							</div>
 						</div>
@@ -59,15 +60,15 @@
 								<div class="col-md-6">
 									<div class="shadow p-3 bg-success text-light mt-3">
 										<p>Receita atual <button class="btn rounded-0 overlay-button float-right"><i class="material-icons">visibility</i></button></p>
-										<h3>R$ 1000,00</h3>
-										<p><i class="material-icons">arrow_upward</i> %5,23</p>
+										<h3>R$ {{ctrl.receitaTotal}}</h3>
+										<p><i class="material-icons">arrow_upward</i> %{{ctrl.receita}}</p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="shadow p-3 bg-danger text-light mt-3">
 										<p>Despesas <button class="btn rounded-0 overlay-button float-right"><i class="material-icons">visibility</i></button></p>
-										<h3>R$ 1000,00</h3>
-										<p><i class="material-icons">arrow_downward</i> %5,23</p>
+										<h3>R$ {{ctrl.despesaTotal}}</h3>
+										<p><i class="material-icons">arrow_downward</i> %{{ctrl.despesa}}</p>
 									</div>
 								</div>
 							</div>
@@ -75,15 +76,15 @@
 								<div class="col-md-6">
 									<div class="shadow p-3 bg-white mt-3">
 										<p>À receber<button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></p>
-										<h3>R$ 2200,00</h3>
-										<p class="text-success"><i class="material-icons">arrow_upward</i> %5,23</p>
+										<h3>R$ {{ctrl.receberTotal}}</h3>
+										<p class="text-success"><i class="material-icons">arrow_upward</i> %{{ctrl.receber}}</p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="shadow p-3 bg-white mt-3">
 										<p>Gastos futuros <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></p>
-										<h3>R$ 800,00</h3>
-										<p class="text-danger"><i class="material-icons">arrow_downward</i> %5,23</p>
+										<h3>R$ {{ctrl.gastosTotal}}</h3>
+										<p class="text-danger"><i class="material-icons">arrow_downward</i> %{{ctrl.gastos}}</p>
 									</div>
 								</div>
 							</div>
@@ -119,7 +120,7 @@
 											<button class="btn rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></button></button>
 											<div class="dropdown-menu dropdown-menu-right">
 												<a class="dropdown-item" href="#">No orçamento</a>
-												<a class="dropdown-item" href="#">Fora e alcance</a>
+												<a class="dropdown-item" href="#">Fora do orçamento</a>
 												<div class="dropdown-divider"></div>
  												<a class="dropdown-item font-weight-bold" href="#">Adicionar desejo</a>
 											</div>
@@ -134,20 +135,10 @@
 												<th>Valor</th>
 												<th></th>
 											</tr>
-											<tr>
-												<td>Fone de ouvido</td>
-												<td>R$ 200,00</td>
-												<td class="text-success">Está no orçamento <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
-											</tr>
-											<tr>
-												<td>Notebook Dell</td>
-												<td>R$ 2500,00</td>
-												<td class="text-danger">Fora de alcance <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
-											</tr>
-											<tr>
-												<td>Corsa 2011</td>
-												<td>R$ 17500,00</td>
-												<td class="text-danger">Fora de alcance <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
+											<tr ng-repeat="item in ctrl.listaDesejos">
+												<td>{{item.nome}}</td>
+												<td>R$ {{item.preco}}</td>
+												<td ng-class="{'text-success': item.status == 'Dentro do orçamento', 'text-danger': item.status == 'Fora do orçamento'}">{{item.status}} <button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button></td>
 											</tr>
 										</table>
 									</div>
