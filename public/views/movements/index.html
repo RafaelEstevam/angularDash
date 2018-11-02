@@ -34,32 +34,34 @@
 								</div>
 								<div class="row mb-3">
 									<div class="col-sm-12">
-										<table class="table table-bordered table-responsive">
-											<tr>
-												<th><input type="checkbox"></th>
-												<th>Id</th>
-												<th>Nome</th>
-												<th>Valor</th>
-												<th>Data</th>
-												<th>Status</th>
-												<th></th>
-											</tr>
-											<tr ng-repeat="item in ctrl.listaMovimentos">
-												<td><input type="checkbox"></td>
-												<td>{{item.id}}</td>
-												<td>{{item.nome}}</td>
-												<td>R$ {{item.preco}}</td>
-												<td>{{item.data}}</td>
-												<td ng-class="{'bg-success': item.status == 'Receita', 'bg-danger': item.status == 'Despesa'}" class="text-light">
-													{{item.status}}
-												</td>
-												<td>
-													<button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button>
-													<button class="btn btn-info rounded-0 float-right"><i class="material-icons">edit</i></button>
-													<button class="btn btn-danger rounded-0 float-right"><i class="material-icons">close</i></button>
-												</td>
-											</tr>
-										</table>
+											<div class="table-responsive">
+												<table class="table table-bordered">
+													<tr>
+														<th><input type="checkbox"></th>
+														<th>Id</th>
+														<th>Nome</th>
+														<th>Valor</th>
+														<th>Data</th>
+														<th>Status</th>
+														<th></th>
+													</tr>
+													<tr ng-repeat="item in ctrl.listaMovimentos">
+														<td><input type="checkbox"></td>
+														<td>{{item.id}}</td>
+														<td>{{item.nome}}</td>
+														<td>R$ {{item.preco}}</td>
+														<td>{{item.data}}</td>
+														<td ng-class="{'bg-success': item.status == 'Receita', 'bg-danger': item.status == 'Despesa'}" class="text-light">
+															{{item.status}}
+														</td>
+														<td>
+															<button class="btn rounded-0 float-right"><i class="material-icons">visibility</i></button>
+															<button class="btn btn-info rounded-0 float-right"><i class="material-icons">edit</i></button>
+															<button class="btn btn-danger rounded-0 float-right"><i class="material-icons">close</i></button>
+														</td>
+													</tr>
+												</table>
+											</div>
 									</div>
 								</div>
 								<div class="row">
